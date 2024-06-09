@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es,en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="titulo">  TUTORIAL DE JOHN</h1>
+  
+  <script src="script.js"></script>
+  <img src="Imagen/tienda.jpg" width="350px" alt="">
+
+  <p>CHINO</p>
+  <p>CHINO</p>
+  <p>CHINO</p>
+<script>
+   const ite=[1,2,3,2,4,5];
+   /*const p=new Set(ite);
+   p.add(6);
+   const pa=ite.map(ite=>{
+    return ite*2;
+   });
+   console.log(pa);*/
+    const iterador =ite[Symbol.iterator]();
+    //console.log(iterador.next());
+
+    /*let net=iterador.next();
+    while(!net.done){
+        console.log(net.value);
+        net=iterador.next();
+    }
+    console.log("chino")
+
+    const num=[1,2,3,4];
+    const num1=[4,5,6,7];
+    const res=new Set([...num,...num1]);
+    console.log(res);
+    const fun=()=>{console.log("hdsdin");}
+    console.log(fun);
+    function F(){
+        console.log("chino");
+    }
+    console.info(window)
+
+    const persona={
+        nombre:"",
+        edad:0
+    }
+    const manejador={
+        set(obj,prop,valor){
+            obj[prop]=valor;
+        }
+    }
+    const chino=new Proxy(persona,manejador);
+    chino.nombre="yad";
+    console.log(chino)
+    console.log(persona)*/
+
+    //TRANSAFORMACION DE ARRAY EN JS
+    /*const arr=[1,2,3,4,5,6,7,8];
+    //FILTER: crea un nuevo array con los elements q devuelven True al ejecutar la funcion q recibe x param
+    const newArray1=arr.filter(valor=>{
+        return valor>2;
+    })
+    console.log(newArray1);
+    //MAP: Crea un nre Array de ;as misma long pero con los valores transf con la func q le pasamos x param
+    const newArray2=arr.map((num2)=>{
+        return num2*2;
+    })
+    console.log(newArray2);
+    //COMBINACIONDE FILTER CON MAP
+    const CombFilMap=arr.filter((n)=>{
+        return n % 2 === 0;
+            }).map((n)=>{
+                            return n*2;
+                        });
+    console.log(CombFilMap);
+
+    //REDUCE: Crea un unico valor a paritir de un array..Basucamente lo que hace es sumatoria, recibe dos
+    //parametros (Func q ejecutara x cada element,valor dond comenzara la suma).
+    //Func q ejecutara x cada element: recibe 3 param (acumulador,elementActual,Indice)
+
+    const Redu=arr.reduce(
+        (acum,vActual)=>{return acum+vActual;},0
+    )
+    console.log(Redu);*/
+
+
+    //TRANFORMACION DE OBJ
+    //
+
+    /*const persona={
+        nombre:"chino",
+        apellido:"ynapoles",
+        edad:32,
+        email:{
+            user:"ynapolesr",
+            dominio:"@uci.cu"
+        },
+        function() {
+            console.log("Mi function");
+        }
+        }*/
+    
+    /*for(let prop in persona){
+            console.log(`la propiedad se llama ${prop} y el valor es ${persona[prop]}`);
+    }*/
+
+    /*//Object.keys(obj a iterar) ..Restorna un Array con las propiedades enumarables de un obj.
+
+    //PROP ENUMERABLES..SON AQUELLAS SOBRE LAS Q SE PUEDE ITERAR..ES COMUN Q LOS METODOS QUE TIENEN
+    //LOS OBJ NOS INTERSA Q NO SE PUEDAN ITERAR SOBRE ELLAS
+    const p1=Object.keys(persona);
+    console.log(p1);
+    p1.forEach((val,prop)=>{
+        console.log(`La propiedad es ${val}`)
+    })
+
+    //Object.values(obj)..Restorna un Array con las valores correspondientes a las prop enumarables de un obj.
+    const p2=Object.values(persona);
+    console.log(p2);
+    p2.forEach(valor=>{
+        console.log(valor);
+       }
+    )*/
+    //Object.entries(obj)..Restorna un Array de Array con las [propids,valor] correspondientes a la prop enumarable de un obj.
+    /*const p3=Object.entries(persona);
+    console.log(p3);
+    p3.forEach(entry=>{
+        console.log(entry);
+    })*/
+    /*console.clear();
+    const a=[1,2,3]
+    const ar=[...a];
+    console.log(ar);
+
+    let name="pepe"
+    let edad=20
+    const pir={
+        name,
+        edad
+    }
+    console.log(pir)
+    const p=[2,1,0,2];
+   const [n,e,...c]=p;
+   console.log(p);*/
+
+    const pers={
+        nombre:"",
+        apellido:"",
+        edad:0
+    }
+
+    const manejad={
+        set(obj,prop,valor){
+            if(Object.keys(obj).indexOf(prop)!==-1){
+                obj[prop]=valor;
+            }
+                 
+        }
+    }
+
+    const yadriel=new Proxy(pers,manejad);
+    yadriel.nombre="chino";
+    yadriel.apellido="napoles";
+    yadriel.edad=32;
+    yadriel.estado="S";
+    console.log(yadriel);
+    
+    
+</script>
+  
+</body>
+</html>
