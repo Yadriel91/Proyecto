@@ -7,26 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 class="titulo">  TUTORIAL DE JOHN</h1>
+  <h1 class="titulo">  ARTE CALLEJERO </h1>
   
   <script src="script.js"></script>
-  <img src="Imagen/tienda.jpg" width="350px" alt="">
+  <img src="Imagen/art1.png" width="340px" alt="">
 
-  <p>CHINO</p>
-  <p>CHINO</p>
-  <p>CHINO</p>
+  <p>PÁRRAFO PRIMERA RESEÑA</p>
+  <p>PÁRRAFO SEGUNDA RESEÑA</p>
+  <p>PÁRRAFO TERCERA RESEÑA</p>
 <script>
    const ite=[1,2,3,2,4,5];
-   /*const p=new Set(ite);
-   p.add(6);
+   const p=new Set(ite);
+   // console.log(p)
+   p.delete(5);
+   //console.log(p)
    const pa=ite.map(ite=>{
     return ite*2;
    });
-   console.log(pa);*/
+   //console.log(pa);
     const iterador =ite[Symbol.iterator]();
-    //console.log(iterador.next());
+    console.log(iterador.next());
 
-    /*let net=iterador.next();
+    let net=iterador.next();
+    console.log(net)
     while(!net.done){
         console.log(net.value);
         net=iterador.next();
@@ -36,13 +39,13 @@
     const num=[1,2,3,4];
     const num1=[4,5,6,7];
     const res=new Set([...num,...num1]);
-    console.log(res);
+    //console.log(res);
     const fun=()=>{console.log("hdsdin");}
-    console.log(fun);
+    //console.log(fun);
     function F(){
         console.log("chino");
     }
-    console.info(window)
+    //console.info(window)
 
     const persona={
         nombre:"",
@@ -55,8 +58,8 @@
     }
     const chino=new Proxy(persona,manejador);
     chino.nombre="yad";
-    console.log(chino)
-    console.log(persona)*/
+    //console.log(chino)
+    //console.log(persona)
 
     //TRANSAFORMACION DE ARRAY EN JS
     /*const arr=[1,2,3,4,5,6,7,8];
